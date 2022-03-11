@@ -21,7 +21,7 @@ export default function TabOneScreen() {
         <View
           style={{
               flex: 1,
-              backgroundColor: '#FFFFFF',
+              backgroundColor: '#ffffff',
               marginBottom: 10,
               borderRadius: 10,
               overflow: 'hidden'
