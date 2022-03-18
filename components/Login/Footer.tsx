@@ -1,16 +1,20 @@
 import * as React from "react";
 import { View, Text } from "react-native";
-import { fonts } from "react-native-elements/dist/config";
+
+interface IProps{
+    text?:string ;
+}
 
 
 
-export default function Footer()  {
+export default function Footer(props : IProps)  {
+    const { text } = props;
     return(
+       
         <View style={{
-            flex: 1,
-            height: 50,
+            height: 90,
             width: '100%',
-            justifyContent: 'center',
+            justifyContent: 'flex-end',
             alignItems: 'center',
             borderRadius: 10,
             paddingBottom: 20,
@@ -19,7 +23,11 @@ export default function Footer()  {
               fontSize: 14,
               fontFamily: 'poppins-regular'
           }}>
-            Create an account?
+                {text ?
+                    text
+                    :
+                    "Create an account?"
+                }
           </Text>
         </View>
     )
