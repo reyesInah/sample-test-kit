@@ -9,10 +9,18 @@ export default function SignupForm()  {
     const [midnametext, setMidnameText] = React.useState<string>("");
     const [lastnametext, setLastnameText] = React.useState<string>("");
     const [password, setPasswordText] = React.useState<string>("");
+    const [confirmpassword, setConfirmpasswordText] = React.useState<string>("");
     
     const handleSignUp = () => {
-      Alert.alert("Signed Up", "Signed Up Successfully")
-  }
+          if (emailtext === "" || firstnametext === "" || midnametext === "" || lastnametext === "" ||  password === "" || confirmpassword === "") {
+          Alert.alert("Error Sign Up", "Please type all needed fields");
+          } else {
+          Alert.alert("Signed Up", "Signed Up Successfully")
+        }
+    }
+      
+  
+
     return(
     <View style={{
         flex: 1
@@ -100,6 +108,23 @@ export default function SignupForm()  {
         secureTextEntry={true}
       />
       </View>
+      <View style={{
+        flex: 0
+      }}>
+      <View style={{
+        flex: 0,
+        marginBottom: 10
+      }}>
+    <Text style={styles.textstyle}>
+         Confirm Password
+    </Text>
+    <TextInput 
+        style={styles.input}
+        onChangeText={setConfirmpasswordText}
+        value={confirmpassword}
+        secureTextEntry={true}
+      />
+      </View>
     <View style={{
         flex: 0
       }}>
@@ -122,6 +147,7 @@ export default function SignupForm()  {
         type={"solid"}
         onPress= {handleSignUp}
       />
+    </View>
     </View>
     </View>
     </View>

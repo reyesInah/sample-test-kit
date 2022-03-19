@@ -12,10 +12,11 @@ export default function LoginForm()  {
 
       if (emailtext === EMAIL_ADD && password === PASSWORD) {
         Alert.alert("Login", "Login Successfully");
-      } else {
+        } else {
         Alert.alert("Error Login", "Invalid Email and Password");
       }
-  }
+    }
+
     return(
         <View style={{
             flex: 0
@@ -53,7 +54,6 @@ export default function LoginForm()  {
             placeholder={"your password"}
             secureTextEntry={true}
           />
-        
           </View>
         <View style={{
             flex:0
