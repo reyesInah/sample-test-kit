@@ -1,12 +1,11 @@
 import React from "react";
 import { View, Image, TextInput, Dimensions,Text, StyleSheet, Alert } from "react-native";
 import { Button } from 'react-native-elements';
-import Header from "../components/Login/Header";
-import LoginForm from "../components/Login/LoginForm";
-import Footer from "../components/Login/Footer";
+import Header from "../components/Register/Header";
+import SignupForm from "../components/Register/SignupForm";
 
 export default function TabOneScreen() {
-  
+
   return (
     <View style={styles.container}>
       <View style={{
@@ -17,12 +16,11 @@ export default function TabOneScreen() {
         padding: 10,
         borderRadius: 10
       }}>
-        <Header />
-        <LoginForm />
-        <Footer />
-      </View>
-    </View>
-  );
+         < Header />
+         < SignupForm />
+        </View>
+        </View>
+  )
 }
 const styles = StyleSheet.create({
   container:{

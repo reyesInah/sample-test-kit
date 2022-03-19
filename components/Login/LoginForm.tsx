@@ -13,7 +13,7 @@ export default function LoginForm()  {
       if (emailtext === EMAIL_ADD && password === PASSWORD) {
         Alert.alert("Login", "Login Successfully");
       } else {
-        Alert.alert("Error Login", "Invalid Username and Password");
+        Alert.alert("Error Login", "Invalid Email and Password");
       }
   }
     return(

@@ -1,31 +1,45 @@
-import { StyleSheet } from 'react-native';
+import React from "react";
+import { View, Image, TextInput, Dimensions,Text, StyleSheet, Alert } from "react-native";
+import { Button } from 'react-native-elements';
+import Header from "../components/Login/Header";
+import LoginForm from "../components/Login/LoginForm";
+import Footer from "../components/Login/Footer";
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
-
-export default function TabTwoScreen() {
+export default function TabOneScreen() {
+  
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
+      <View style={{
+        flex : 0,
+        height: Dimensions.get('screen').height * 0.5,
+        width: '80%',
+        backgroundColor: 'white',
+        padding: 10,
+        borderRadius: 10
+      }}>
+        <Header />
+        <LoginForm />
+        <Footer />
+      </View>
     </View>
   );
 }
-
 const styles = StyleSheet.create({
-  container: {
+  container:{
     flex: 1,
+    backgroundColor: '#ffffff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
+  textstyle:{
+    fontFamily: 'poppins-bold',
+    fontSize: 13
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
+  input: {
+    height: 50,
+    borderWidth: 1,
+    padding: 10,
+    borderRadius: 10
+  }
+})
+
