@@ -10,22 +10,12 @@ export default function SignupForm()  {
     const [lastnametext, setLastnameText] = React.useState<string>("");
     const [password, setPasswordText] = React.useState<string>("");
     
-    const handleLogin = () => {
-      const EMAIL_ADD = " ";
-      const FNAME = " ";
-      const MIDNAME = " ";
-      const LNAME = " ";
-      const PASSWORD = " ";
-  
-      if (emailtext === EMAIL_ADD && firstnametext === FNAME && midnametext === MIDNAME && lastnametext === LNAME && password === PASSWORD) {
-        Alert.alert("Sign Up", "Sign Up Successfully");
-      } else {
-        Alert.alert("Error Sign Up", "Invalid Email and Password");
-      }
+    const handleSignUp = () => {
+      Alert.alert("Signed Up", "Signed Up Successfully")
   }
     return(
     <View style={{
-        flex: 0
+        flex: 1
       }}>
       <View style={{
         flex: 0,
@@ -43,7 +33,7 @@ export default function SignupForm()  {
     
      </View>
      <View style={{
-        flex: 0
+        flex: 1
       }}>
       <View style={{
         flex: 0,
@@ -60,7 +50,7 @@ export default function SignupForm()  {
       />
      </View>
      <View style={{
-        flex: 0
+        flex: 1
       }}>
       <View style={{
         flex: 0,
@@ -77,7 +67,7 @@ export default function SignupForm()  {
       />
      </View>
      <View style={{
-        flex: 0
+        flex: 1
       }}>
       <View style={{
         flex: 0,
@@ -111,13 +101,15 @@ export default function SignupForm()  {
       />
       </View>
     <View style={{
-        flex:0
+        flex: 0
       }}>
         <View style={{
         flex: 0,
+        marginVertical: 20,
+        borderRadius: 10
       }}>
       <Button
-        title={"Create an account"}
+        title={"Sign Up"}
         titleStyle={{
           fontFamily:'poppins-bold',
           fontSize : 20,
@@ -128,7 +120,7 @@ export default function SignupForm()  {
           padding: 5
         }}
         type={"solid"}
-        onPress= {handleLogin}
+        onPress= {handleSignUp}
       />
     </View>
     </View>

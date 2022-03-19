@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Image, TextInput, Dimensions,Text, StyleSheet, Alert } from "react-native";
+import { View, Image, Dimensions, TextInput,Text, StyleSheet, Alert } from "react-native";
 import { Button } from 'react-native-elements';
 import Header from "../components/Register/Header";
 import SignupForm from "../components/Register/SignupForm";
@@ -10,11 +10,9 @@ export default function TabOneScreen() {
     <View style={styles.container}>
       <View style={{
         flex : 0,
-        height: Dimensions.get('screen').height * 0.5,
+        height: Dimensions.get('screen').height * 0.7,
         width: '80%',
-        backgroundColor: 'white',
-        padding: 10,
-        borderRadius: 10
+        backgroundColor: 'white'
       }}>
          < Header />
          < SignupForm />

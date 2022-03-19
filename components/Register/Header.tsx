@@ -8,7 +8,8 @@ export default function Header() {
               flex: 0,
               backgroundColor: '#ffffff',
               marginBottom: 10,
-              overflow: 'visible'
+              overflow: 'visible',
+              alignItems: 'center'
           }}
         >
           <Text style={{
@@ -16,7 +17,7 @@ export default function Header() {
             fontSize: 25,
             color: 'orange'
           }}>
-          Sign Up
+          Create an Account
           </Text>
         </View>
     )

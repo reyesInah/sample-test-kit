@@ -60,6 +60,7 @@ export default function LoginForm()  {
           }}>
             <View style={{
             flex: 0,
+            marginVertical: 20
           }}>
           <Button
             title={"Login"}
